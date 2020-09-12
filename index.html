@@ -26,7 +26,7 @@
 			import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.120.1/build/three.module.js";
 			import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.120.1/examples/jsm/controls/OrbitControls.js";
 			import { OBJLoader } from "https://cdn.jsdelivr.net/npm/three@0.120.1/examples/jsm/loaders/OBJLoader.js";
-			// import { MTLLoader } from "https://cdn.jsdelivr.net/npm/three@0.120.1/examples/jsm/loaders/MTLLoader.js";
+			import { MTLLoader } from "https://cdn.jsdelivr.net/npm/three@0.120.1/examples/jsm/loaders/MTLLoader.js";
 
 			var scene = new THREE.Scene();
 
@@ -56,14 +56,13 @@
 			scene.add(fillLight);
 			scene.add(backLight);
 
-			// var mtlLoader = new THREE.MTLLoader();
-			// mtlLoader.load('r2-d2.mtl', function (materials) {
+			var mtlLoader = new MTLLoader();
+			mtlLoader.load('https://raw.githubusercontent.com/ericfhchen/isochron/master/assets/texturedMesh.mtl', function (materials) {
 
-			//     materials.preload();
+			    materials.preload();
 
 			    var objLoader = new OBJLoader();
-			    // objLoader.setMaterials(materials);
-			    // objLoader.setPath('/examples/3d-obj-loader/assets/');
+			    objLoader.setMaterials(materials);
 			    objLoader.load('https://raw.githubusercontent.com/ericfhchen/isochron/master/assets/texturedMesh.obj', function (object) {
 
 			        scene.add(object);
@@ -79,7 +78,7 @@
 
 			    });
 
-			// });
+			});
 
 			var animate = function () {
 				requestAnimationFrame( animate );
