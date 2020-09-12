@@ -57,14 +57,15 @@
 			scene.add(backLight);
 
 			var mtlLoader = new MTLLoader();
-			mtlLoader.load('https://raw.githubusercontent.com/ericfhchen/isochron/master/assets/texturedMesh.mtl', function (materials) {
-
+			mtlLoader.setPath( 'https://raw.githubusercontent.com/ericfhchen/isochron/master/assets/' );
+			mtlLoader.load('texturedMesh.mtl', function (materials) {
+				console.log(materials);
 			    materials.preload();
 
 			    var objLoader = new OBJLoader();
 			    objLoader.setMaterials(materials);
 			    objLoader.load('https://raw.githubusercontent.com/ericfhchen/isochron/master/assets/texturedMesh.obj', function (object) {
-
+			    	console.log(materials);
 			        scene.add(object);
 			        object.position.y -= 0;
 			        
