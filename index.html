@@ -14,11 +14,6 @@
 		<script src="/examples/3d-obj-loader/assets/MTLLoader.js"></script> -->
 		<!-- <script src="scripts.js"></script> -->
 
-		<!-- <script src="https://cdn.jsdelivr.net/npm/three@0.120.1/build/three.js"></script> -->
-		<!-- <script type="module" src="https://cdn.jsdelivr.net/npm/three@0.120.1/examples/jsm/controls/OrbitControls.js"></script> -->
-		<!-- <script type="module" src="https://cdn.jsdelivr.net/npm/three@0.120.1/examples/jsm/loaders/OBJLoader.js"></script> -->
-		<!-- <script type="module" src="https://cdn.jsdelivr.net/npm/three@0.120.1/examples/jsm/loaders/MTLLoader.js"></script> -->
-
 		<canvas></canvas>
 
 		<script type="module">
@@ -26,12 +21,15 @@
 			import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.120.1/build/three.module.js";
 			import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.120.1/examples/jsm/controls/OrbitControls.js";
 			import { OBJLoader } from "https://cdn.jsdelivr.net/npm/three@0.120.1/examples/jsm/loaders/OBJLoader.js";
+			import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.120.1/examples/jsm/loaders/GLTFLoader.js";
 			import { MTLLoader } from "https://cdn.jsdelivr.net/npm/three@0.120.1/examples/jsm/loaders/MTLLoader.js";
 
 			var scene = new THREE.Scene();
 
 			var camera = new THREE.PerspectiveCamera( 1, window.innerWidth/window.innerHeight, 0.1, 500 );
 			camera.position.z = 100;
+
+			var obj;
 
 			var renderer = new THREE.WebGLRenderer( { alpha: true } );
 			renderer.setClearColor( 0x000000, 0 );
@@ -52,37 +50,63 @@
 			var backLight = new THREE.DirectionalLight(0xffffff, 1.0);
 			backLight.position.set(100, 0, -100).normalize();
 
-			// scene.add(keyLight);
+			scene.add(keyLight);
 			scene.add(fillLight);
 			scene.add(backLight);
 
-			var mtlLoader = new MTLLoader();
-			mtlLoader.setPath( 'https://raw.githubusercontent.com/ericfhchen/isochron/master/assets/' );
-			mtlLoader.load('texturedMesh.mtl', function (materials) {
-				console.log(materials);
-			    materials.preload();
+			// var mtlLoader = new MTLLoader();
+			// mtlLoader.setPath( 'https://raw.githubusercontent.com/ericfhchen/isochron/master/assets/' );
+			// mtlLoader.load('texturedMesh.mtl', function (materials) {
+			// 	console.log(materials);
+			//     materials.preload();
 
-			    var objLoader = new OBJLoader();
-			    objLoader.setMaterials(materials);
-			    objLoader.load('https://raw.githubusercontent.com/ericfhchen/isochron/master/assets/texturedMesh.obj', function (object) {
-			    	console.log(materials);
-			        scene.add(object);
-			        object.position.y -= 0;
-			        
-			        var boundingBox = new THREE.Box3();
-			        boundingBox.setFromObject( object );
-			        var center = new THREE.Vector3();
-			        boundingBox.getCenter( center );
+			//     var objLoader = new OBJLoader();
+			//     objLoader.setMaterials(materials);
+			//     objLoader.load('https://raw.githubusercontent.com/ericfhchen/isochron/master/assets/texturedMesh.obj', function (object) {
+			//     	console.log(materials);
+			//     	object.traverse( function( child ) {
+			// 			if ( child.isMesh ) child.geometry.computeVertexNormals();
+			// 		} );
+			//         scene.add(object);
+			//         object.position.y -= 0;
+			//         obj = object;
 
-			         // set camera to rotate around center of object
-			        controls.target = center;
+			//     });
 
-			    });
+			// });
 
-			});
+			var loader = new GLTFLoader();
+				loader.crossOrigin = true;
+				loader.load ('https://github.com/ericfhchen/isochron/blob/master/assets/texturedMesh.gltf', function ( object ) {
+						scene.add(object);
+						object.animations; // Array<THREE.AnimationClip>
+						object.scene; // THREE.Group
+						object.scenes; // Array<THREE.Group>
+						object.cameras; // Array<THREE.Camera>
+						object.asset; // Object
+						// var object = object;
+					},
+
+					function ( error ) {
+					console.log( 'An error happened' );
+					}
+				);
 
 			var animate = function () {
 				requestAnimationFrame( animate );
+
+				// create box at origin to define a center point for object
+				// var boundingBox = new THREE.Box3();
+				// boundingBox.setFromObject( obj );
+				// var center = new THREE.Vector3();
+				// boundingBox.getCenter( center );
+							
+				// set camera to rotate around center of object
+				// controls.target = center;
+				
+				// object rotation
+				// object.rotation.y += 0.001;
+
 				controls.update();
 				renderer.render(scene, camera);
 			};
