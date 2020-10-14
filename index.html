@@ -14,82 +14,82 @@
 		<script src="/examples/3d-obj-loader/assets/MTLLoader.js"></script> -->
 		<!-- <script src="scripts.js"></script> -->
 
-		<canvas></canvas>
+<canvas></canvas>
 
-		<script type="module">
-		  import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.120.1/build/three.module.js";
-		  import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.120.1/examples/jsm/controls/OrbitControls.js";
-		  import { OBJLoader } from "https://cdn.jsdelivr.net/npm/three@0.120.1/examples/jsm/loaders/OBJLoader.js";
-		  import { MTLLoader } from "https://cdn.jsdelivr.net/npm/three@0.120.1/examples/jsm/loaders/MTLLoader.js";
-		
-		  var scene = new THREE.Scene();
-		
-		  var camera = new THREE.PerspectiveCamera( 1, window.innerWidth/window.innerHeight, 0.1, 500 );
-		  camera.position.z = 100;
-		
-		  var obj;
-		
-		  var renderer = new THREE.WebGLRenderer( { alpha: true } );
-		  renderer.setClearColor( 0x000000, 0 );
-		  renderer.setSize( window.innerWidth, window.innerHeight );
-		  document.body.appendChild( renderer.domElement );
-		
-		  var controls = new OrbitControls(camera, renderer.domElement);
-		  controls.enableDamping = true;
-		  controls.dampingFactor = 0.25;
-		  controls.enableZoom = true;
-		
-		  var keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
-		  keyLight.position.set(-100, 0, 100);
-		
-		  var fillLight = new THREE.DirectionalLight(new THREE.Color('rgb(255,255,255)'), 0.75);
-		  fillLight.position.set(100, 0, 100);
-		
-		  var backLight = new THREE.DirectionalLight(0xffffff, 1.0);
-		  backLight.position.set(100, 0, -100).normalize();
-		
-		  // scene.add(keyLight);
-		  scene.add(fillLight);
-		  scene.add(backLight);
-		
-		  var mtlLoader = new MTLLoader();
-		  mtlLoader.setPath( 'https://raw.githubusercontent.com/ericfhchen/isochron/master/assets/' );
-		  mtlLoader.load('texturedMesh%20computed_normals.obj.mtl', function (materials) {
-			console.log(materials);
-			materials.preload();
-		
-			var objLoader = new OBJLoader();
-			objLoader.setMaterials(materials);
-			objLoader.load('https://raw.githubusercontent.com/ericfhchen/isochron/master/assets/texturedMesh%20computed_normals.obj', function (object) {
-			  console.log(materials);
-			  object.traverse( function( child ) {
-				if ( child.isMesh ) child.geometry.computeVertexNormals();
-			  } );
-			  scene.add(object);
-			  object.position.y -= 0;
-			  obj = object;
-		
-			});
-		
-		  });
-		
-		  var animate = function () {
-			requestAnimationFrame( animate );
-			var boundingBox = new THREE.Box3();
-			boundingBox.setFromObject( obj );
-			var center = new THREE.Vector3();
-			boundingBox.getCenter( center );
-		
-			// set camera to rotate around center of object
-			controls.target = center;
-			//obj.rotation.x += 0.001; 
-			obj.rotation.y += 0.001;
-		
-			controls.update();
-			renderer.render(scene, camera);
-		  };
-		
-		  animate();
-		</script>
+<script type="module">
+  import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.120.1/build/three.module.js";
+  import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.120.1/examples/jsm/controls/OrbitControls.js";
+  import { OBJLoader } from "https://cdn.jsdelivr.net/npm/three@0.120.1/examples/jsm/loaders/OBJLoader.js";
+  import { MTLLoader } from "https://cdn.jsdelivr.net/npm/three@0.120.1/examples/jsm/loaders/MTLLoader.js";
+
+  var scene = new THREE.Scene();
+
+  var camera = new THREE.PerspectiveCamera( 1, window.innerWidth/window.innerHeight, 0.1, 500 );
+  camera.position.z = 100;
+
+  var obj;
+
+  var renderer = new THREE.WebGLRenderer( { alpha: true } );
+  renderer.setClearColor( 0x000000, 0 );
+  renderer.setSize( window.innerWidth, window.innerHeight );
+  document.body.appendChild( renderer.domElement );
+
+  var controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.25;
+  controls.enableZoom = true;
+
+  var keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
+  keyLight.position.set(-100, 0, 100);
+
+  var fillLight = new THREE.DirectionalLight(new THREE.Color('rgb(255,255,255)'), 0.75);
+  fillLight.position.set(100, 0, 100);
+
+  var backLight = new THREE.DirectionalLight(0xffffff, 1.0);
+  backLight.position.set(100, 0, -100).normalize();
+
+  // scene.add(keyLight);
+  scene.add(fillLight);
+  scene.add(backLight);
+
+  var mtlLoader = new MTLLoader();
+  mtlLoader.setPath( 'https://raw.githubusercontent.com/ericfhchen/isochron/master/assets/' );
+  mtlLoader.load('texturedMesh.mtl', function (materials) {
+    console.log(materials);
+    materials.preload();
+
+    var objLoader = new OBJLoader();
+    objLoader.setMaterials(materials);
+    objLoader.load('https://raw.githubusercontent.com/ericfhchen/isochron/master/assets/texturedMesh.obj', function (object) {
+      console.log(materials);
+      object.traverse( function( child ) {
+        if ( child.isMesh ) child.geometry.computeVertexNormals();
+      } );
+      scene.add(object);
+      object.position.y -= 0;
+      obj = object;
+
+    });
+
+  });
+
+  var animate = function () {
+    requestAnimationFrame( animate );
+    var boundingBox = new THREE.Box3();
+    boundingBox.setFromObject( obj );
+    var center = new THREE.Vector3();
+    boundingBox.getCenter( center );
+
+    // set camera to rotate around center of object
+    controls.target = center;
+    //obj.rotation.x += 0.001; 
+    obj.rotation.y += 0.001;
+
+    controls.update();
+    renderer.render(scene, camera);
+  };
+
+  animate();
+</script>
 	</body>
 </html>
