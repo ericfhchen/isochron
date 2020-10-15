@@ -1,0 +1,24 @@
+.bigfont {
+ font-size: 36px;       
+}
+
+.paragraph {
+    font-size: 40px;
+}
+
+.overlay {
+    display: none;
+}
+
+@media only screen and (max-width: 400px) {
+    .bigfont {
+      font-size: 3em;
+    }
+    
+
+
+  }
+
+body {
+
+}
