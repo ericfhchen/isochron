@@ -20,5 +20,241 @@
   }
 
 body {
+  background: #000;
+}
 
+
+/* Product Variant Selector Styling */
+.shopify-buy__option-select-wrapper {
+  border: 1px solid white;
+  border-radius: 0px;
+  background: none;
+}
+
+.shopify-buy__option-select__select {
+  color: #fff;
+  font-family: 'Panama Monospace', 'Times New Roman', serif;
+  width: auto;
+}
+
+.shopify-buy__option-select__select:hover {
+  cursor: pointer;
+}
+
+.shopify-buy__option-select__select:focus {
+  outline: none;
+}
+
+.shopify-buy__layout-vertical .shopify-buy__product__variant-selectors {
+  width: auto;
+}
+
+.shopify-buy__select-icon {
+  fill: #fff;
+  width: 10px;
+  height: 10px;
+}
+
+/* Buy Button Styling */
+.shopify-buy__btn {
+  font-family: 'Panama Monospace', 'Times New Roman', serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: none;
+  border: 1px solid white;
+  border-radius: 0px;
+  padding: 4% 8%;
+}
+
+.shopify-buy__btn:hover {
+  background: none;
+  opacity: 0.6;
+}
+
+.shopify-buy__product {
+  min-width: none;
+  width: auto;
+  margin: 0;
+}
+
+.shopify-buy__btn[disabled] {
+  background: none;
+  pointer-events: none;
+  opacity: 0.4;
+  border: none;
+}
+
+/* Cart Toggle Styling */
+.shopify-buy__cart-toggle {
+  font-family: 'Panama Monospace', Times New Roman, serif;
+  color: #fff;
+  background: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.shopify-buy__cart-toggle:hover {
+  background: none;
+  opacity: 0.6;
+}
+
+.shopify-buy__cart-toggle__count {
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
+
+.shopify-buy__icon-cart--side {
+  display: none !important;
+}
+
+/* Cart Styling */
+.shopify-buy-frame--cart {
+  padding: 1% 2%;
+  border-left: 0.5px solid #fff;
+  background: #000;
+}
+
+.shopify-buy__cart__header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.shopify-buy__cart__title {
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.shopify-buy__btn--close {
+  background: none;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  border: 1px solid #fff;
+  padding: 4px 8px;
+}
+
+.shopify-buy__btn--close:first-child {
+  display: none;
+}
+
+.shopify-buy__btn--close:focus {
+  outline: none;
+}
+
+.shopify-buy__cart-empty-text {
+  margin-top: 8%;
+}
+
+.shopify-buy__btn--cart-checkout {
+  width: 100%;
+  padding: 4%;
+}
+
+.shopify-buy__btn--cart-checkout:hover {
+  background: #fff;
+  color: #000;
+  opacity: 1;
+}
+
+.shopify-buy__cart {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.shopify-buy__cart__subtotal__price {
+  margin-bottom: 4%;
+}
+
+.shopify-buy__cart__notice {
+  margin-bottom: 4%;
+}
+
+.shopify-buy__cart-item {
+  position: relative;
+}
+
+.shopify-buy__cart-item__image {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.shopify-buy__cart-item__title {
+    margin-left: 120px;
+    display: block;
+}
+
+.shopify-buy__cart-item__variant-title {
+    margin-left: 120px;
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 4%;
+}
+
+.shopify-buy__quantity-container {
+    margin-left: 120px;
+    display: flex;
+    margin-top: 0%;
+}
+
+.shopify-buy__btn--seamless {
+    background: none;  
+    border: 0.5px solid #fff;
+    width: 28px;
+    height: 28px;
+    padding-top: 4px;
+}
+
+span.visuallyhidden {
+    border: 0;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.shopify-buy__quantity .shopify-buy__cart-item__quantity-input {
+  background: none;
+  border: 0.5px solid #fff;
+  margin: 0px 6px;
+  text-align: center;
+  max-width: 50px;
+}
+
+svg {
+  fill: #fff;
+}
+
+.shopify-buy__cart__subtotal__text {
+  float: left;
+  clear: both;
+}
+
+.shopify-buy__cart__subtotal__price {
+  float: right;
+}
+
+.shopify-buy__cart__notice {
+  clear: both;
+}
+
+input:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
 }
