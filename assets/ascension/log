@@ -1,0 +1,108 @@
+Program called with the following parameters:
+ * angleHardThreshold = 90
+ * bestScoreThreshold = 0
+ * downscale =  Unknown Type "unsigned int"
+ * fillHoles = 0
+ * flipNormals = 0
+ * forceVisibleByAllVertices = 0
+ * ini = "D:/P/photogrammetry/ascension t2/MeshroomCache/PrepareDenseScene/6e7e460797c9f0777b0e04ce2b5e98dc84889d32/mvs.ini"
+ * inputDenseReconstruction = "D:/P/photogrammetry/ascension t2/MeshroomCache/Meshing/e59c81b8946e57f7b26dc4429d84af52e443299b/denseReconstruction.bin"
+ * inputMesh = "D:/P/photogrammetry/ascension t2/MeshroomCache/MeshFiltering/366e8e5110c52897958bda0dfeee7bff6b2cbd72/mesh.obj"
+ * maxNbImagesForFusion = 3
+ * output = "D:/P/photogrammetry/ascension t2/MeshroomCache/Texturing/aefe83118dfeb098994514257a958247c7218f1c"
+ * outputTextureFileType = "png"
+ * padding =  Unknown Type "unsigned int"
+ * textureSide =  Unknown Type "unsigned int"
+ * unwrapMethod = "Basic"
+ * verboseLevel = "info"
+ * visibilityRemappingMethod = "PullPush"
+
+[23:37:36.186775][info] Found 1 image dimension(s): 
+[23:37:36.186775][info]  - [1920x1280]
+[23:37:36.237629][info] Overall maximum dimension: [1920x1280]
+[23:37:36.295137][info] Loading mesh from obj file: D:/P/photogrammetry/ascension t2/MeshroomCache/MeshFiltering/366e8e5110c52897958bda0dfeee7bff6b2cbd72/mesh.obj
+[23:37:36.474659][info] 	- # vertices: 146779
+	- # normals: 0
+	- # uv coordinates: 0
+	- # triangles: 293482
+[23:37:37.022700][info] Mesh loaded: 
+	- #points: 146779
+	- # triangles: 293482
+[23:37:37.096452][info] remapMeshVisibility based on triangles start.
+[23:37:37.723675][info] remapMeshVisibility done.
+[23:37:37.753595][info] Input mesh has no UV coordinates, start unwrapping (Basic)
+[23:37:37.753595][info] Generating UVs (textureSide: 8192; padding: 15).
+[23:37:37.753595][info] Creating texture charts.
+[23:37:38.907318][info] Packing texture charts (293482 charts).
+[23:37:39.760643][info] Finalize packed charts (310 charts).
+[23:37:39.774606][info] Creating texture atlases.
+[23:37:39.775606][info] 	- texture atlas 1
+[23:37:39.776604][info] Filled with 310 charts.
+[23:37:40.305889][info] Unwrapping done.
+[23:37:40.305889][info] Writing obj and mtl file.
+[23:37:40.885433][info] Writing done: 
+	- obj file: D:/P/photogrammetry/ascension t2/MeshroomCache/Texturing/aefe83118dfeb098994514257a958247c7218f1c\texturedMesh.obj
+	- mtl file: D:/P/photogrammetry/ascension t2/MeshroomCache/Texturing/aefe83118dfeb098994514257a958247c7218f1c\texturedMesh.mtl
+[23:37:40.885433][info] Generate textures.
+[23:37:41.027025][info] Generating texture for atlas 1/1 (293482 triangles).
+[23:37:44.671984][info] Reading pixel color.
+[23:37:45.139698][info]  - camera 1/55 (17399 triangles)
+[23:37:45.286815][info]  - camera 2/55 (15806 triangles)
+[23:37:45.447404][info]  - camera 3/55 (6528 triangles)
+[23:37:45.683283][info]  - camera 4/55 (6967 triangles)
+[23:37:45.906194][info]  - camera 5/55 (10371 triangles)
+[23:37:46.058786][info]  - camera 6/55 (47868 triangles)
+[23:37:46.264237][info]  - camera 7/55 (7538 triangles)
+[23:37:46.434291][info]  - camera 8/55 (13064 triangles)
+[23:37:46.598381][info]  - camera 9/55 (9414 triangles)
+[23:37:46.762743][info]  - camera 10/55 (8520 triangles)
+[23:37:46.993267][info]  - camera 11/55 (11767 triangles)
+[23:37:47.166738][info]  - camera 12/55 (24473 triangles)
+[23:37:47.358225][info]  - camera 13/55 (41859 triangles)
+[23:37:47.561684][info]  - camera 14/55 (10462 triangles)
+[23:37:47.734606][info]  - camera 15/55 (22979 triangles)
+[23:37:47.941504][info]  - camera 16/55 (5899 triangles)
+[23:37:48.114506][info]  - camera 17/55 (43856 triangles)
+[23:37:48.283055][info]  - camera 18/55 (11042 triangles)
+[23:37:48.429024][info]  - camera 19/55 (46142 triangles)
+[23:37:48.606059][info]  - camera 20/55 (23854 triangles)
+[23:37:48.789587][info]  - camera 21/55 (6547 triangles)
+[23:37:49.005011][info]  - camera 22/55 (5980 triangles)
+[23:37:49.229574][info]  - camera 23/55 (44962 triangles)
+[23:37:49.422842][info]  - camera 24/55 (15160 triangles)
+[23:37:49.608367][info]  - camera 25/55 (19016 triangles)
+[23:37:49.798368][info]  - camera 26/55 (9058 triangles)
+[23:37:50.012794][info]  - camera 27/55 (18669 triangles)
+[23:37:50.195305][info]  - camera 28/55 (45238 triangles)
+[23:37:50.359866][info]  - camera 29/55 (17138 triangles)
+[23:37:50.531409][info]  - camera 30/55 (6348 triangles)
+[23:37:50.741844][info]  - camera 31/55 (13771 triangles)
+[23:37:50.914384][info]  - camera 32/55 (15311 triangles)
+[23:37:51.091432][info]  - camera 33/55 (24168 triangles)
+[23:37:51.276466][info]  - camera 34/55 (46993 triangles)
+[23:37:51.485908][info]  - camera 35/55 (43498 triangles)
+[23:37:51.681772][info]  - camera 36/55 (9322 triangles)
+[23:37:51.852334][info]  - camera 37/55 (13080 triangles)
+[23:37:52.071260][info]  - camera 38/55 (47855 triangles)
+[23:37:52.264253][info]  - camera 39/55 (12664 triangles)
+[23:37:52.440779][info]  - camera 40/55 (8176 triangles)
+[23:37:52.604341][info]  - camera 41/55 (43568 triangles)
+[23:37:52.802815][info]  - camera 42/55 (7547 triangles)
+[23:37:53.010255][info]  - camera 43/55 (44118 triangles)
+[23:37:53.233657][info]  - camera 44/55 (0 triangles)
+[23:37:53.377273][info]  - camera 45/55 (46690 triangles)
+[23:37:53.587711][info]  - camera 46/55 (20309 triangles)
+[23:37:53.745289][info]  - camera 47/55 (8957 triangles)
+[23:37:53.960532][info]  - camera 48/55 (9505 triangles)
+[23:37:54.206388][info]  - camera 49/55 (8902 triangles)
+[23:37:54.348540][info]  - camera 50/55 (43250 triangles)
+[23:37:54.529067][info]  - camera 51/55 (6473 triangles)
+[23:37:54.722550][info]  - camera 52/55 (44997 triangles)
+[23:37:54.963648][info]  - camera 53/55 (12077 triangles)
+[23:37:55.128206][info]  - camera 54/55 (14798 triangles)
+[23:37:55.294275][info]  - camera 55/55 (48749 triangles)
+[23:37:55.507224][info] Edge padding (15 pixels).
+[23:37:58.878645][info] Computing final (average) color.
+[23:37:59.476048][info] Writing texture file: D:/P/photogrammetry/ascension t2/MeshroomCache/Texturing/aefe83118dfeb098994514257a958247c7218f1c\texture_0.png
+[23:37:59.476048][info] Downscaling texture (2x).
+[23:38:05.753051][info] Task done in (s): 29.568000

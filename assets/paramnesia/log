@@ -1,0 +1,156 @@
+Program called with the following parameters:
+ * angleHardThreshold = 90
+ * bestScoreThreshold = 0
+ * downscale =  Unknown Type "unsigned int"
+ * fillHoles = 0
+ * flipNormals = 0
+ * forceVisibleByAllVertices = 0
+ * ini = "D:/P/photogrammetry/paramnesia t3/MeshroomCache/PrepareDenseScene/c2fbe72f648283d0e01c0575c866ec99e25692b4/mvs.ini"
+ * inputDenseReconstruction = "D:/P/photogrammetry/paramnesia t3/MeshroomCache/Meshing/ae26641d986406772546f48563c8e55d0debae73/denseReconstruction.bin"
+ * inputMesh = "D:/P/photogrammetry/paramnesia t3/MeshroomCache/MeshFiltering/3696262e6aa892900455e7a966a6c0a656fcffeb/mesh.obj"
+ * maxNbImagesForFusion = 3
+ * output = "D:/P/photogrammetry/paramnesia t3/MeshroomCache/Texturing/aec47b4f950e5d4d561eea7048f26631a1958762"
+ * outputTextureFileType = "png"
+ * padding =  Unknown Type "unsigned int"
+ * textureSide =  Unknown Type "unsigned int"
+ * unwrapMethod = "Basic"
+ * verboseLevel = "info"
+ * visibilityRemappingMethod = "PullPush"
+
+[19:56:29.035631][info] Found 1 image dimension(s): 
+[19:56:29.035631][info]  - [4000x5336]
+[19:56:29.073536][info] Overall maximum dimension: [4000x5336]
+[19:56:29.258070][info] Loading mesh from obj file: D:/P/photogrammetry/paramnesia t3/MeshroomCache/MeshFiltering/3696262e6aa892900455e7a966a6c0a656fcffeb/mesh.obj
+[19:56:30.066872][info] 	- # vertices: 662743
+	- # normals: 0
+	- # uv coordinates: 0
+	- # triangles: 1325291
+[19:56:32.438529][info] Mesh loaded: 
+	- #points: 662743
+	- # triangles: 1325291
+[19:56:32.922506][info] remapMeshVisibility based on triangles start.
+[19:56:35.177478][info] remapMeshVisibility done.
+[19:56:35.287179][info] Input mesh has no UV coordinates, start unwrapping (Basic)
+[19:56:35.287179][info] Generating UVs (textureSide: 8192; padding: 15).
+[19:56:35.287179][info] Creating texture charts.
+[19:56:37.815417][info] Packing texture charts (1325291 charts).
+[19:56:41.741941][info] Finalize packed charts (3088 charts).
+[19:56:41.840649][info] Creating texture atlases.
+[19:56:41.841646][info] 	- texture atlas 1
+[19:56:41.861595][info] Filled with 1891 charts.
+[19:56:41.864585][info] 	- texture atlas 2
+[19:56:41.865583][info] Filled with 371 charts.
+[19:56:41.867577][info] 	- texture atlas 3
+[19:56:41.871566][info] Filled with 826 charts.
+[19:56:44.328997][info] Unwrapping done.
+[19:56:44.328997][info] Writing obj and mtl file.
+[19:56:46.884356][info] Writing done: 
+	- obj file: D:/P/photogrammetry/paramnesia t3/MeshroomCache/Texturing/aec47b4f950e5d4d561eea7048f26631a1958762\texturedMesh.obj
+	- mtl file: D:/P/photogrammetry/paramnesia t3/MeshroomCache/Texturing/aec47b4f950e5d4d561eea7048f26631a1958762\texturedMesh.mtl
+[19:56:46.884356][info] Generate textures.
+[19:56:47.022026][info] Generating texture for atlas 1/3 (548999 triangles).
+[19:56:50.492705][info] Reading pixel color.
+[19:56:50.946535][info]  - camera 1/29 (29178 triangles)
+[19:56:51.968756][info]  - camera 2/29 (25986 triangles)
+[19:56:53.046880][info]  - camera 3/29 (160166 triangles)
+[19:56:54.671552][info]  - camera 4/29 (164083 triangles)
+[19:56:56.124639][info]  - camera 5/29 (13837 triangles)
+[19:56:57.101027][info]  - camera 6/29 (16571 triangles)
+[19:56:58.088386][info]  - camera 7/29 (111929 triangles)
+[19:56:59.367964][info]  - camera 8/29 (10664 triangles)
+[19:57:00.658511][info]  - camera 9/29 (85909 triangles)
+[19:57:01.989950][info]  - camera 10/29 (66133 triangles)
+[19:57:03.275510][info]  - camera 11/29 (188144 triangles)
+[19:57:04.446379][info]  - camera 12/29 (163329 triangles)
+[19:57:05.769839][info]  - camera 13/29 (12702 triangles)
+[19:57:06.940707][info]  - camera 14/29 (144607 triangles)
+[19:57:08.114570][info]  - camera 15/29 (15942 triangles)
+[19:57:10.714617][info]  - camera 16/29 (28154 triangles)
+[19:57:12.970577][info]  - camera 17/29 (23608 triangles)
+[19:57:16.319645][info]  - camera 18/29 (27962 triangles)
+[19:57:19.820281][info]  - camera 19/29 (177173 triangles)
+[19:57:22.570897][info]  - camera 20/29 (144166 triangles)
+[19:57:25.051264][info]  - camera 21/29 (14720 triangles)
+[19:57:27.556560][info]  - camera 22/29 (159261 triangles)
+[19:57:30.375021][info]  - camera 23/29 (36059 triangles)
+[19:57:33.650261][info]  - camera 24/29 (15472 triangles)
+[19:57:36.773903][info]  - camera 25/29 (148202 triangles)
+[19:57:39.742961][info]  - camera 26/29 (23574 triangles)
+[19:57:42.464681][info]  - camera 27/29 (93004 triangles)
+[19:57:45.525494][info]  - camera 28/29 (12603 triangles)
+[19:57:48.316029][info]  - camera 29/29 (67254 triangles)
+[19:57:50.123195][info] Edge padding (15 pixels).
+[19:57:53.076321][info] Computing final (average) color.
+[19:57:53.729578][info] Writing texture file: D:/P/photogrammetry/paramnesia t3/MeshroomCache/Texturing/aec47b4f950e5d4d561eea7048f26631a1958762\texture_0.png
+[19:57:53.729578][info] Downscaling texture (2x).
+[19:58:01.490761][info] Generating texture for atlas 2/3 (480890 triangles).
+[19:58:04.615437][info] Reading pixel color.
+[19:58:05.069189][info]  - camera 1/29 (19654 triangles)
+[19:58:06.129352][info]  - camera 2/29 (18125 triangles)
+[19:58:07.165581][info]  - camera 3/29 (91451 triangles)
+[19:58:08.328470][info]  - camera 4/29 (104019 triangles)
+[19:58:09.465428][info]  - camera 5/29 (11381 triangles)
+[19:58:10.331113][info]  - camera 6/29 (15006 triangles)
+[19:58:11.395266][info]  - camera 7/29 (133989 triangles)
+[19:58:12.459420][info]  - camera 8/29 (19879 triangles)
+[19:58:13.544517][info]  - camera 9/29 (169616 triangles)
+[19:58:14.771236][info]  - camera 10/29 (183572 triangles)
+[19:58:16.020893][info]  - camera 11/29 (90173 triangles)
+[19:58:17.221681][info]  - camera 12/29 (91003 triangles)
+[19:58:18.429450][info]  - camera 13/29 (24203 triangles)
+[19:58:19.478643][info]  - camera 14/29 (109005 triangles)
+[19:58:20.671453][info]  - camera 15/29 (14498 triangles)
+[19:58:21.559082][info]  - camera 16/29 (18117 triangles)
+[19:58:22.615253][info]  - camera 17/29 (12888 triangles)
+[19:58:23.820031][info]  - camera 18/29 (15359 triangles)
+[19:58:24.868226][info]  - camera 19/29 (96540 triangles)
+[19:58:26.022140][info]  - camera 20/29 (83073 triangles)
+[19:58:27.142147][info]  - camera 21/29 (15406 triangles)
+[19:58:28.220260][info]  - camera 22/29 (83750 triangles)
+[19:58:29.190666][info]  - camera 23/29 (20393 triangles)
+[19:58:30.059343][info]  - camera 24/29 (25378 triangles)
+[19:58:31.298027][info]  - camera 25/29 (100978 triangles)
+[19:58:32.389108][info]  - camera 26/29 (18681 triangles)
+[19:58:33.499140][info]  - camera 27/29 (134853 triangles)
+[19:58:34.576261][info]  - camera 28/29 (19100 triangles)
+[19:58:35.446929][info]  - camera 29/29 (167635 triangles)
+[19:58:36.525047][info] Edge padding (15 pixels).
+[19:58:39.483158][info] Computing final (average) color.
+[19:58:40.131400][info] Writing texture file: D:/P/photogrammetry/paramnesia t3/MeshroomCache/Texturing/aec47b4f950e5d4d561eea7048f26631a1958762\texture_1.png
+[19:58:40.131400][info] Downscaling texture (2x).
+[19:58:47.526563][info] Generating texture for atlas 3/3 (295402 triangles).
+[19:58:49.201084][info] Reading pixel color.
+[19:58:49.655866][info]  - camera 1/29 (19933 triangles)
+[19:58:50.481658][info]  - camera 2/29 (24498 triangles)
+[19:58:51.483976][info]  - camera 3/29 (59772 triangles)
+[19:58:52.718674][info]  - camera 4/29 (79763 triangles)
+[19:58:53.638214][info]  - camera 5/29 (10910 triangles)
+[19:58:54.476971][info]  - camera 6/29 (20388 triangles)
+[19:58:55.341658][info]  - camera 7/29 (55564 triangles)
+[19:58:56.215321][info]  - camera 8/29 (15500 triangles)
+[19:58:57.381203][info]  - camera 9/29 (57279 triangles)
+[19:58:58.441366][info]  - camera 10/29 (59535 triangles)
+[19:58:59.358911][info]  - camera 11/29 (80320 triangles)
+[19:59:00.440019][info]  - camera 12/29 (75534 triangles)
+[19:59:01.852242][info]  - camera 13/29 (15889 triangles)
+[19:59:05.311988][info]  - camera 14/29 (59617 triangles)
+[19:59:07.984837][info]  - camera 15/29 (15844 triangles)
+[19:59:09.670328][info]  - camera 16/29 (13403 triangles)
+[19:59:10.733485][info]  - camera 17/29 (22657 triangles)
+[19:59:11.932281][info]  - camera 18/29 (25036 triangles)
+[19:59:12.971498][info]  - camera 19/29 (77257 triangles)
+[19:59:14.064586][info]  - camera 20/29 (48448 triangles)
+[19:59:14.960178][info]  - camera 21/29 (12699 triangles)
+[19:59:16.164960][info]  - camera 22/29 (55787 triangles)
+[19:59:17.438548][info]  - camera 23/29 (16544 triangles)
+[19:59:20.711793][info]  - camera 24/29 (18232 triangles)
+[19:59:22.129002][info]  - camera 25/29 (67875 triangles)
+[19:59:23.070483][info]  - camera 26/29 (22593 triangles)
+[19:59:23.914227][info]  - camera 27/29 (58871 triangles)
+[19:59:24.813820][info]  - camera 28/29 (12927 triangles)
+[19:59:26.003638][info]  - camera 29/29 (65370 triangles)
+[19:59:27.089732][info] Edge padding (15 pixels).
+[19:59:30.252318][info] Computing final (average) color.
+[19:59:30.840732][info] Writing texture file: D:/P/photogrammetry/paramnesia t3/MeshroomCache/Texturing/aec47b4f950e5d4d561eea7048f26631a1958762\texture_2.png
+[19:59:30.840732][info] Downscaling texture (2x).
+[19:59:37.807466][info] Task done in (s): 188.774000

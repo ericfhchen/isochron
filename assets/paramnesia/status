@@ -1,0 +1,18 @@
+{
+    "status": "SUCCESS",
+    "execMode": "LOCAL",
+    "nodeName": "Texturing_1",
+    "nodeType": "Texturing",
+    "packageName": "aliceVision",
+    "packageVersion": null,
+    "graph": "",
+    "commandLine": "aliceVision_texturing  --ini \"D:/P/photogrammetry/paramnesia t3/MeshroomCache/PrepareDenseScene/c2fbe72f648283d0e01c0575c866ec99e25692b4/mvs.ini\" --inputDenseReconstruction \"D:/P/photogrammetry/paramnesia t3/MeshroomCache/Meshing/ae26641d986406772546f48563c8e55d0debae73/denseReconstruction.bin\" --inputMesh \"D:/P/photogrammetry/paramnesia t3/MeshroomCache/MeshFiltering/3696262e6aa892900455e7a966a6c0a656fcffeb/mesh.obj\" --textureSide 8192 --downscale 2 --outputTextureFileType png --unwrapMethod Basic --fillHoles False --padding 15 --maxNbImagesForFusion 3 --bestScoreThreshold 0.0 --angleHardThreshold 90.0 --forceVisibleByAllVertices False --flipNormals False --visibilityRemappingMethod PullPush --verboseLevel info --output \"D:/P/photogrammetry/paramnesia t3/MeshroomCache/Texturing/aec47b4f950e5d4d561eea7048f26631a1958762\" ",
+    "env": null,
+    "startDateTime": "2020-10-24 19:56:26.918270",
+    "endDateTime": "2020-10-24 19:59:38.623283",
+    "elapsedTime": 191.70501279830933,
+    "hostname": "LAPTOP-3IQUR730",
+    "sessionUid": "4d73748c-15a5-11eb-adb7-107b44e06c33",
+    "returnCode": 0,
+    "elapsedTimeStr": "0:03:11.705013"
+}

@@ -3,7 +3,8 @@
 		<title>Three.js Boilerplate</title>
 		<style>
 			body { margin: 0; }
-			canvas { width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
+			/* canvas { width: 100%; height: 100%; position: absolute; top: 0; left: 0;} */
+      .container { width: 75%; height: 100%; display: flex; justify-content: center; align-items: center; }
 		</style>
 	</head>
 	<body>
@@ -14,7 +15,16 @@
 		<script src="/examples/3d-obj-loader/assets/MTLLoader.js"></script> -->
 		<!-- <script src="scripts.js"></script> -->
 
-<canvas></canvas>
+<div class="navbar">
+  <h1>Isochron</h1>
+</div>
+
+<div class="container">
+  <div id="canvas">
+    <!-- THREE JS SHOULD BELONG HERE -->
+  </div>
+</div>
+
 
 <script type="module">
   import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.120.1/build/three.module.js";
@@ -28,11 +38,16 @@
   camera.position.z = 100;
 
   var obj;
+	
+  var container = document.querySelector(".container")
 
+	var canvas = document.getElementById( 'canvas' );
+	container.appendChild( canvas );  
+  
   var renderer = new THREE.WebGLRenderer( { alpha: true } );
   renderer.setClearColor( 0x000000, 0 );
-  renderer.setSize( window.innerWidth, window.innerHeight );
-  document.body.appendChild( renderer.domElement );
+  renderer.setSize( 0.75*window.innerWidth, 0.75*window.innerHeight );
+  canvas.appendChild( renderer.domElement );
 
   var controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
@@ -53,8 +68,7 @@
   scene.add(backLight);
 
   var mtlLoader = new MTLLoader();
-  mtlLoader.setPath( 'https://raw.githubusercontent.com/ericfhchen/isochron/master/assets/' );
-  mtlLoader.load('texturedMesh.mtl', function (materials) {
+  mtlLoader.load('https://raw.githubusercontent.com/ericfhchen/isochron/master/assets/texturedMesh.mtl', function (materials) {
     console.log(materials);
     materials.preload();
 
@@ -80,10 +94,13 @@
     var center = new THREE.Vector3();
     boundingBox.getCenter( center );
 
+
+
     // set camera to rotate around center of object
     controls.target = center;
     //obj.rotation.x += 0.001; 
     obj.rotation.y += 0.001;
+
 
     controls.update();
     renderer.render(scene, camera);
@@ -91,5 +108,7 @@
 
   animate();
 </script>
+
+
 	</body>
 </html>
